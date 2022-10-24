@@ -30,4 +30,8 @@ public class UserService {
 			throw new RuntimeException(String.format("%d를 가진 회원은 존재하지 않습니다.", userId));
 		}
 	}
+	
+	public List<User> findByAge(Integer age) {
+		return userRepository.findAllByAge(age);
+	}
 }

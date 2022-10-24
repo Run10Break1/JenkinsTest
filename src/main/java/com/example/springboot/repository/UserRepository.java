@@ -10,5 +10,5 @@ import com.example.springboot.model.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-	
+	List<User> findAllByAge(Integer age);
 }
