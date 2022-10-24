@@ -36,4 +36,9 @@ public class UserController {
 	public ResponseEntity<List<User>> findByCondition(@PathVariable("age") Integer age) {
 		return ResponseEntity.ok(userService.findByAge(age));
 	}
+	
+	@GetMapping("")
+	public ResponseEntity<String> helloWorld() {
+		return ResponseEntity.ok("hello world!");
+	}
 }
